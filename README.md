@@ -4,7 +4,7 @@ A smaller-scale take on NVIDIA DLSS — a CNN that reconstructs high-resolution
 detail from a low-resolution image, trained from scratch on DIV2K and served
 through a full-stack demo with a live before/after comparison.
 
-![demo slider placeholder](outputs/eval_samples/compare_00.png)
+![mini-DLSS demo](docs/demo-screenshot.png)
 
 ## Results
 
