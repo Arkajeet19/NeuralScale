@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mini-DLSS Demo</title>
+<style>
+  :root {
+    --bg: #0f1115;
+    --card: #171a21;
+    --accent: #5b8cff;
+    --text: #e8eaed;
+    --muted: #8b92a3;
+    --border: #2a2e38;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+  }
+  h1 { font-size: 1.6rem; margin-bottom: 4px; }
+  p.subtitle { color: var(--muted); margin-top: 0; margin-bottom: 28px; text-align: center; max-width: 520px; }
+
+  #dropzone {
+    width: 100%;
+    max-width: 520px;
+    border: 2px dashed var(--border);
+    border-radius: 12px;
+    padding: 40px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+    background: var(--card);
+  }
+  #dropzone.dragover { border-color: var(--accent); background: #1b2030; }
+  #dropzone p { margin: 8px 0 0; color: var(--muted); font-size: 0.9rem; }
+  #fileInput { display: none; }
+
+  #status { margin-top: 16px; color: var(--muted); font-size: 0.9rem; min-height: 1.2em; }
+
+  #result {
+    margin-top: 32px;
+    width: 100%;
+    max-width: 800px;
+    display: none;
+  }
+  .compare-wrap {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    user-select: none;
+    cursor: ew-resize;
+  }
+  .compare-wrap img {
+    display: block;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+  }
+  .compare-wrap .top-img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    clip-path: inset(0 50% 0 0);
+  }
+  .divider {
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: var(--accent);
+    pointer-events: none;
+  }
+  .handle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 36px; height: 36px;
+    margin-left: -18px; margin-top: -18px;
+    background: var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    pointer-events: none;
+  }
+  .labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  .meta {
+    margin-top: 16px;
+    font-size: 0.85rem;
+    color: var(--muted);
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<h1>Mini-DLSS</h1>
+<p class="subtitle">Upload a low-resolution image to see a 4x super-resolution upscale compared against plain bicubic interpolation.</p>
+
+<div id="dropzone">
+  <div>Drag & drop an image here, or click to choose a file</div>
+  <p>JPG / PNG, any size (large images are auto-downscaled before processing)</p>
+  <input type="file" id="fileInput" accept="image/*">
+</div>
+
+<div id="status"></div>
+
+<div id="result">
+  <div class="compare-wrap" id="compareWrap">
+    <img id="bicubicImg" class="bottom-img" src="" alt="Bicubic">
+    <img id="modelImg" class="top-img" src="" alt="Model output">
+    <div class="divider" id="divider"></div>
+    <div class="handle" id="handle">↔</div>
+  </div>
+  <div class="labels">
+    <span>Model (4x super-resolution)</span>
+    <span>Bicubic (naive upscale)</span>
+  </div>
+  <div class="meta" id="meta"></div>
+</div>
+
+<script>
+const API_URL = "http://localhost:8000";
+
+const dropzone = document.getElementById("dropzone");
+const fileInput = document.getElementById("fileInput");
+const status = document.getElementById("status");
+const result = document.getElementById("result");
+const bicubicImg = document.getElementById("bicubicImg");
+const modelImg = document.getElementById("modelImg");
+const compareWrap = document.getElementById("compareWrap");
+const divider = document.getElementById("divider");
+const handle = document.getElementById("handle");
+const meta = document.getElementById("meta");
+
+dropzone.addEventListener("click", () => fileInput.click());
+dropzone.addEventListener("dragover", (e) => { e.preventDefault(); dropzone.classList.add("dragover"); });
+dropzone.addEventListener("dragleave", () => dropzone.classList.remove("dragover"));
+dropzone.addEventListener("drop", (e) => {
+  e.preventDefault();
+  dropzone.classList.remove("dragover");
+  if (e.dataTransfer.files.length) handleFile(e.dataTransfer.files[0]);
+});
+fileInput.addEventListener("change", () => {
+  if (fileInput.files.length) handleFile(fileInput.files[0]);
+});
+
+async function handleFile(file) {
+  status.textContent = "Upscaling... (this may take a few seconds)";
+  result.style.display = "none";
+
+  const formData = new FormData();
+  formData.append("file", file);
+
+  try {
+    const res = await fetch(`${API_URL}/upscale`, { method: "POST", body: formData });
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({ detail: res.statusText }));
+      throw new Error(err.detail || "Request failed");
+    }
+    const data = await res.json();
+
+    bicubicImg.src = `data:image/png;base64,${data.bicubic_b64}`;
+    modelImg.src = `data:image/png;base64,${data.model_b64}`;
+    meta.textContent = `Input: ${data.original_size[0]}x${data.original_size[1]} -> Output: ${data.output_size[0]}x${data.output_size[1]}`;
+
+    status.textContent = "";
+    result.style.display = "block";
+    setDividerPosition(50);
+  } catch (e) {
+    status.textContent = `Error: ${e.message}. Is the backend running at ${API_URL}?`;
+  }
+}
+
+function setDividerPosition(percent) {
+  percent = Math.max(0, Math.min(100, percent));
+  modelImg.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
+  divider.style.left = `${percent}%`;
+  handle.style.left = `${percent}%`;
+}
+
+let dragging = false;
+compareWrap.addEventListener("mousedown", () => { dragging = true; });
+window.addEventListener("mouseup", () => { dragging = false; });
+window.addEventListener("mousemove", (e) => {
+  if (!dragging) return;
+  const rect = compareWrap.getBoundingClientRect();
+  const percent = ((e.clientX - rect.left) / rect.width) * 100;
+  setDividerPosition(percent);
+});
+compareWrap.addEventListener("touchmove", (e) => {
+  const rect = compareWrap.getBoundingClientRect();
+  const touch = e.touches[0];
+  const percent = ((touch.clientX - rect.left) / rect.width) * 100;
+  setDividerPosition(percent);
+});
+</script>
+
+</body>
+</html>
