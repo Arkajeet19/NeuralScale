@@ -26,7 +26,9 @@ sys.path.append(os.path.join(os.path.dirname(__file__), "..", "src"))
 from model import EDSRBaseline
 
 SCALE = 4
-CHECKPOINT_PATH = os.path.join(os.path.dirname(__file__), "..", "models", "best.pth")
+# Switched to the GAN-finetuned generator. Point back at "best.pth" to
+# serve the plain DIV2K-trained model instead.
+CHECKPOINT_PATH = os.path.join(os.path.dirname(__file__), "..", "models", "gan_generator.pth")
 MAX_INPUT_DIMENSION = 512  # safety cap -- a 512px LR image becomes a 2048px output at 4x,
                             # which is already a lot of VRAM; bigger uploads get downscaled first
 
