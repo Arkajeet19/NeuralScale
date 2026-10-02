@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #0B0D10;
+  color: #E6E9EC;
+  font-family: 'Space Grotesk', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #3DDBD9;
+  color: #0B0D10;
+}
+
+/* visible keyboard focus -- accessibility floor */
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid #3DDBD9;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
