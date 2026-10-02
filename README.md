@@ -4,7 +4,7 @@ A smaller-scale take on NVIDIA DLSS — a CNN that reconstructs high-resolution
 detail from a low-resolution image, trained from scratch on DIV2K and served
 through a full-stack demo with a live before/after comparison.
 
-![mini-DLSS demo](docs/demo-screenshot.png)
+![demo slider placeholder](outputs/eval_samples/compare_00.png)
 
 ## Results
 
@@ -132,13 +132,49 @@ is slower due to one-time disk reads from the dataset).
 
 PyTorch · FastAPI · HTML/CSS/JS (no build step) · DIV2K dataset
 
+## Stretch goal: SRGAN fine-tuning on real gameplay footage
+
+The base model above is trained on DIV2K, which is general photography --
+not representative of rendered game content (flat shading, anti-aliased
+edges, particle effects, UI elements). To close that gap and push toward
+the actual DLSS use case:
+
+- **Collected a custom dataset** of ~180 screenshots across 10 AAA titles
+  (mixed 768p/1080p/1440p/4K, all genuine native captures or verified
+  official press sources -- no re-compressed/resized web images, to avoid
+  training on baked-in compression artifacts).
+- **Added a discriminator network + VGG19 perceptual loss** (`src/discriminator.py`,
+  `src/perceptual_loss.py`) on top of the existing generator, following the
+  SRGAN approach: pixel (L1) + perceptual (VGG feature-space) + adversarial
+  loss combined, rather than pixel loss alone.
+- **Warm-started from the DIV2K-trained checkpoint** rather than training
+  the GAN from scratch, since GAN training is notoriously unstable early on
+  -- starting from an already-competent generator skips that failure-prone
+  phase (`src/train_gan.py`).
+
+**Result**: 32.67 dB / 0.8639 SSIM vs. a 32.80 dB / 0.8667 bicubic baseline
+on held-out game screenshots -- essentially tied with bicubic on PSNR/SSIM,
+while producing visibly sharper texture detail (clothing, foliage) with no
+GAN-typical artifacts on inspection.
+
+This is a known and documented tradeoff in SR research: adversarial/perceptual
+training optimizes for *looking* realistic, which doesn't always align with
+pixel-accurate PSNR. Training logs showed the discriminator outpacing the
+generator partway through fine-tuning (D_loss dropped from ~0.76 to ~0.24
+while generator adversarial loss rose from ~1.4 to ~3.7) -- likely a result
+of the relatively small fine-tuning set (~162 images) letting the
+discriminator effectively memorize "real," which limited how much the
+adversarial term could push the output away from an accurate reconstruction.
+A deliberately low adversarial-loss weight (0.001) kept this from degrading
+output quality, at the cost of a more muted version of the classic SRGAN
+"look" than a more aggressive weighting would produce.
+
 ## Possible next steps
 
-- **SRGAN / perceptual loss**: add an adversarial + perceptual loss component
-  for sharper, more realistic textures than pure PSNR-optimized L1 training
-  tends to produce.
+- **Rebalance the GAN**: lower the discriminator's learning rate or increase
+  the adversarial loss weight to counter the imbalance observed above, for
+  a more pronounced sharpening effect.
 - **Video frame interpolation**: a simplified version of DLSS Frame
   Generation, synthesizing in-between frames from consecutive ones.
-- **Game-screenshot fine-tuning**: fine-tune on gameplay footage specifically,
-  since DIV2K is general photography and real-time upscalers target
-  synthetic/rendered content with different texture statistics.
+- **Larger fine-tuning set**: more collected screenshots would likely reduce
+  the discriminator-memorization effect seen above.

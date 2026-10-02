@@ -3,14 +3,16 @@ venv/
 __pycache__/
 *.pyc
 
-# Dataset (too large for git -- see README for download instructions)
+# Datasets (too large for git -- see README for download/build instructions)
 data/raw/
+data/game_screenshots/
 
 # Trained model checkpoints (too large for git)
 models/*.pth
 
 # Training logs
 outputs/logs/
+outputs/logs_gan/
 
 # OS/editor cruft
 .vscode/

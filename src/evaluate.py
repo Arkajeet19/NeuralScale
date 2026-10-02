@@ -30,8 +30,13 @@ from skimage.color import rgb2ycbcr
 sys.path.append(os.path.dirname(__file__))
 from model import EDSRBaseline
 
-DATA_ROOT = r"G:\mini dlss\data\raw"
-CHECKPOINT_PATH = os.path.join(os.path.dirname(__file__), "..", "models", "best.pth")
+# Evaluating on the held-out GAME SCREENSHOT validation set, not DIV2K --
+# since gan_generator.pth was fine-tuned specifically on game screenshots,
+# this is the more meaningful comparison. Point back at r"G:\mini dlss\data\raw"
+# with DIV2K_valid_HR/DIV2K_valid_LR_bicubic folder names below to evaluate
+# against DIV2K instead (e.g. to check the plain best.pth model).
+DATA_ROOT = os.path.join(os.path.dirname(__file__), "..", "data", "game_screenshots")
+CHECKPOINT_PATH = os.path.join(os.path.dirname(__file__), "..", "models", "gan_generator.pth")
 OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "..", "outputs", "eval_samples")
 SCALE = 4
 NUM_SAMPLE_IMAGES = 5  # how many comparison images to save
@@ -76,8 +81,8 @@ def main():
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-    hr_dir = os.path.join(DATA_ROOT, "DIV2K_valid_HR")
-    lr_dir = os.path.join(DATA_ROOT, "DIV2K_valid_LR_bicubic", "X4")
+    hr_dir = os.path.join(DATA_ROOT, "valid_HR")
+    lr_dir = os.path.join(DATA_ROOT, "valid_LR_bicubic", "X4")
     hr_files = sorted(os.listdir(hr_dir))
     lr_files = sorted(os.listdir(lr_dir))
 
