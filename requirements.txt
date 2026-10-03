@@ -9,3 +9,6 @@ tensorboard>=2.15.0    # for training curves
 fastapi>=0.110.0        # backend (Phase 4)
 uvicorn>=0.29.0          # backend (Phase 4)
 python-multipart>=0.0.9  # file uploads in FastAPI
+onnx>=1.15.0              # export format for optimized inference
+onnxscript>=0.2.0          # required by newer PyTorch's torch.onnx.export (dynamo-based exporter)
+onnxruntime-gpu>=1.17.0   # ONNX inference with CUDA support (falls back to CPU provider too)

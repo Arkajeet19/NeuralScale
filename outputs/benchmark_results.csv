@@ -1,0 +1,13 @@
+resolution,backend,ms_per_frame,fps
+240p -> 960p,PyTorch FP32,33.01,30.3
+240p -> 960p,PyTorch FP16,20.61,48.5
+240p -> 960p,ONNX Runtime CPU,525.78,1.9
+240p -> 960p,ONNX Runtime TensorRT-RTX,32.0,31.2
+320p -> 1280p,PyTorch FP32,54.69,18.3
+320p -> 1280p,PyTorch FP16,33.75,29.6
+320p -> 1280p,ONNX Runtime CPU,910.92,1.1
+320p -> 1280p,ONNX Runtime TensorRT-RTX,57.54,17.4
+480p -> 1920p,PyTorch FP32,125.28,8.0
+480p -> 1920p,PyTorch FP16,73.38,13.6
+480p -> 1920p,ONNX Runtime CPU,2183.04,0.5
+480p -> 1920p,ONNX Runtime TensorRT-RTX,120.87,8.3

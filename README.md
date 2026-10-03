@@ -169,6 +169,58 @@ A deliberately low adversarial-loss weight (0.001) kept this from degrading
 output quality, at the cost of a more muted version of the classic SRGAN
 "look" than a more aggressive weighting would produce.
 
+## Stretch goal: real-time performance benchmarking
+
+Quality metrics alone don't tell the whole DLSS story -- real-time upscaling
+has to run within a tight per-frame latency budget. To measure actual
+deployability rather than just claim it:
+
+- **Exported the model to ONNX** (`src/export_onnx.py`) for comparison
+  against PyTorch's standard execution path.
+- **Benchmarked 4 backends** (`src/benchmark.py`) across 3 resolution
+  presets simulating realistic internal-render -> display-resolution
+  upscaling scenarios (240p->960p, 320p->1280p, 480p->1920p): PyTorch FP32,
+  PyTorch FP16, ONNX Runtime (CPU), and ONNX Runtime with NVIDIA's
+  TensorRT-RTX execution provider.
+- **Caught and fixed a benchmarking bug along the way**: an initial pass
+  showed ONNX Runtime's CUDA provider performing far worse than PyTorch,
+  scaling non-linearly with resolution -- traced to the benchmark copying
+  data between CPU and GPU on every single inference call instead of
+  keeping tensors GPU-resident, fixed using ONNX Runtime's IO Binding API.
+
+**Results** (480p -> 1920p, RTX 3050 8GB):
+
+| Backend | ms/frame | FPS |
+|---|---|---|
+| PyTorch FP32 | 125.3 | 8.0 |
+| **PyTorch FP16** | **73.4** | **13.6** |
+| ONNX Runtime CPU | 2183.0 | 0.5 |
+| ONNX Runtime TensorRT-RTX | 120.9 | 8.3 |
+
+(Full results across all three resolutions in `outputs/benchmark_results.csv`.)
+
+**PyTorch FP16 was the fastest backend tested** -- a genuinely useful,
+near-free win (same architecture, half the memory bandwidth). TensorRT-RTX,
+somewhat counter-intuitively, did not outperform it here. Two caveats
+matter for interpreting this fairly: the TensorRT-RTX run used an FP32
+ONNX graph (not an apples-to-apples precision comparison against PyTorch's
+FP16 result), and this package's execution provider doesn't currently
+expose the IO Binding API the plain CUDA provider does, so its measured
+time still includes CPU<->GPU transfer overhead the other GPU backends
+avoid. Within those constraints, the likely explanation is that TensorRT's
+graph-optimization benefits (operator fusion, kernel tuning) matter most
+for larger, more complex models -- a lean 16-block, 1.4M-parameter network
+may simply have little inefficiency left for it to optimize away.
+
+**None of the tested backends hit conventional real-time thresholds
+(30+ FPS) at the largest resolution tested (480p -> 1920p)** -- 13.6 FPS
+with FP16 is the honest number. At the smaller presets, PyTorch FP16
+does clear 30 FPS (48.4 FPS at 240p->960p, 29.6 FPS at 320p->1280p). This
+is a legitimate finding, not a failure: it shows precisely where a
+quality-focused model this size sits relative to true real-time deployment,
+and what would need to change (model compression, a lighter architecture,
+or a fairer FP16 TensorRT comparison) to close the gap.
+
 ## Possible next steps
 
 - **Rebalance the GAN**: lower the discriminator's learning rate or increase
@@ -178,3 +230,8 @@ output quality, at the cost of a more muted version of the classic SRGAN
   Generation, synthesizing in-between frames from consecutive ones.
 - **Larger fine-tuning set**: more collected screenshots would likely reduce
   the discriminator-memorization effect seen above.
+- **Fairer TensorRT-RTX comparison**: test with FP16 precision enabled
+  (rather than the FP32 ONNX graph used above) for an apples-to-apples
+  comparison against PyTorch FP16's current win.
+- **Model compression**: pruning or a lighter architecture to close the gap
+  to real-time (30+ FPS) at larger resolutions.

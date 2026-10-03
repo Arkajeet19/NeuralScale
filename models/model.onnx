@@ -1,0 +1,1421 @@
+
+pytorch2.14.0+cu132:ç
+¯
+input
+head.weight
+	head.biasconv2dnode_conv2d"Conv*
+kernel_shape@@ *
+group *
+auto_pad"NOTSET *
+	dilations@@ *
+strides@@ *
+pads@@@@ 
+Ä
+conv2d
+body.0.conv1.weight
+body.0.conv1.biasconv2d_1node_conv2d_1"Conv*
+kernel_shape@@ *
+group *
+auto_pad"NOTSET *
+	dilations@@ *
+strides@@ *
+pads@@@@ 
+!
+conv2d_1relu	node_relu"Relu
+Â
+relu
+body.0.conv2.weight
+body.0.conv2.biasconv2d_2node_conv2d_2"Conv*
+kernel_shape@@ *
+group *
+auto_pad"NOTSET *
+	dilations@@ *
+strides@@ *
+pads@@@@ 
+,
+conv2d
+conv2d_2add_30node_add_30"Add
+Ä
+add_30
+body.1.conv1.weight
+body.1.conv1.biasconv2d_3node_conv2d_3"Conv*
+kernel_shape@@ *
+group *
+auto_pad"NOTSET *
+	dilations@@ *
+strides@@ *
+pads@@@@ 
+%
+conv2d_3relu_1node_relu_1"Relu
+Ä
+relu_1
+body.1.conv2.weight
+body.1.conv2.biasconv2d_4node_conv2d_4"Conv*
+kernel_shape@@ *
+group *
+auto_pad"NOTSET *
+	dilations@@ *
+strides@@ *
+pads@@@@ 
+,
+add_30
+conv2d_4add_61node_add_61"Add
+Ä
+add_61
+body.2.conv1.weight
+body.2.conv1.biasconv2d_5node_conv2d_5"Conv*
+kernel_shape@@ *
+group *
+auto_pad"NOTSET *
+	dilations@@ *
+strides@@ *
+pads@@@@ 
+%
+conv2d_5relu_2node_relu_2"Relu
+Ä
+relu_2
+body.2.conv2.weight
+body.2.conv2.biasconv2d_6node_conv2d_6"Conv*
+kernel_shape@@ *
+group *
+auto_pad"NOTSET *
+	dilations@@ *
+strides@@ *
+pads@@@@ 
+,
+add_61
+conv2d_6add_92node_add_92"Add
+Ä
+add_92
+body.3.conv1.weight
+body.3.conv1.biasconv2d_7node_conv2d_7"Conv*
+kernel_shape@@ *
+group *
+auto_pad"NOTSET *
+	dilations@@ *
+strides@@ *
+pads@@@@ 
+%
+conv2d_7relu_3node_relu_3"Relu
+Ä
+relu_3
+body.3.conv2.weight
+body.3.conv2.biasconv2d_8node_conv2d_8"Conv*
+kernel_shape@@ *
+group *
+auto_pad"NOTSET *
+	dilations@@ *
+strides@@ *
+pads@@@@ 
+.
+add_92
+conv2d_8add_123node_add_123"Add
+Å
+add_123
+body.4.conv1.weight
+body.4.conv1.biasconv2d_9node_conv2d_9"Conv*
+kernel_shape@@ *
+group *
+auto_pad"NOTSET *
+	dilations@@ *
+strides@@ *
+pads@@@@ 
+%
+conv2d_9relu_4node_relu_4"Relu
+Æ
+relu_4
+body.4.conv2.weight
+body.4.conv2.bias	conv2d_10node_conv2d_10"Conv*
+kernel_shape@@ *
+group *
+auto_pad"NOTSET *
+	dilations@@ *
+strides@@ *
+pads@@@@ 
+0
+add_123
+	conv2d_10add_154node_add_154"Add
+Ç
+add_154
+body.5.conv1.weight
+body.5.conv1.bias	conv2d_11node_conv2d_11"Conv*
+kernel_shape@@ *
+group *
+auto_pad"NOTSET *
+	dilations@@ *
+strides@@ *
+pads@@@@ 
+&
+	conv2d_11relu_5node_relu_5"Relu
+Æ
+relu_5
+body.5.conv2.weight
+body.5.conv2.bias	conv2d_12node_conv2d_12"Conv*
+kernel_shape@@ *
+group *
+auto_pad"NOTSET *
+	dilations@@ *
+strides@@ *
+pads@@@@ 
+0
+add_154
+	conv2d_12add_185node_add_185"Add
+Ç
+add_185
+body.6.conv1.weight
+body.6.conv1.bias	conv2d_13node_conv2d_13"Conv*
+kernel_shape@@ *
+group *
+auto_pad"NOTSET *
+	dilations@@ *
+strides@@ *
+pads@@@@ 
+&
+	conv2d_13relu_6node_relu_6"Relu
+Æ
+relu_6
+body.6.conv2.weight
+body.6.conv2.bias	conv2d_14node_conv2d_14"Conv*
+kernel_shape@@ *
+group *
+auto_pad"NOTSET *
+	dilations@@ *
+strides@@ *
+pads@@@@ 
+0
+add_185
+	conv2d_14add_216node_add_216"Add
+Ç
+add_216
+body.7.conv1.weight
+body.7.conv1.bias	conv2d_15node_conv2d_15"Conv*
+kernel_shape@@ *
+group *
+auto_pad"NOTSET *
+	dilations@@ *
+strides@@ *
+pads@@@@ 
+&
+	conv2d_15relu_7node_relu_7"Relu
+Æ
+relu_7
+body.7.conv2.weight
+body.7.conv2.bias	conv2d_16node_conv2d_16"Conv*
+kernel_shape@@ *
+group *
+auto_pad"NOTSET *
+	dilations@@ *
+strides@@ *
+pads@@@@ 
+0
+add_216
+	conv2d_16add_247node_add_247"Add
+Ç
+add_247
+body.8.conv1.weight
+body.8.conv1.bias	conv2d_17node_conv2d_17"Conv*
+kernel_shape@@ *
+group *
+auto_pad"NOTSET *
+	dilations@@ *
+strides@@ *
+pads@@@@ 
+&
+	conv2d_17relu_8node_relu_8"Relu
+Æ
+relu_8
+body.8.conv2.weight
+body.8.conv2.bias	conv2d_18node_conv2d_18"Conv*
+kernel_shape@@ *
+group *
+auto_pad"NOTSET *
+	dilations@@ *
+strides@@ *
+pads@@@@ 
+0
+add_247
+	conv2d_18add_278node_add_278"Add
+Ç
+add_278
+body.9.conv1.weight
+body.9.conv1.bias	conv2d_19node_conv2d_19"Conv*
+kernel_shape@@ *
+group *
+auto_pad"NOTSET *
+	dilations@@ *
+strides@@ *
+pads@@@@ 
+&
+	conv2d_19relu_9node_relu_9"Relu
+Æ
+relu_9
+body.9.conv2.weight
+body.9.conv2.bias	conv2d_20node_conv2d_20"Conv*
+kernel_shape@@ *
+group *
+auto_pad"NOTSET *
+	dilations@@ *
+strides@@ *
+pads@@@@ 
+0
+add_278
+	conv2d_20add_309node_add_309"Add
+É
+add_309
+body.10.conv1.weight
+body.10.conv1.bias	conv2d_21node_conv2d_21"Conv*
+kernel_shape@@ *
+group *
+auto_pad"NOTSET *
+	dilations@@ *
+strides@@ *
+pads@@@@ 
+(
+	conv2d_21relu_10node_relu_10"Relu
+É
+relu_10
+body.10.conv2.weight
+body.10.conv2.bias	conv2d_22node_conv2d_22"Conv*
+kernel_shape@@ *
+group *
+auto_pad"NOTSET *
+	dilations@@ *
+strides@@ *
+pads@@@@ 
+0
+add_309
+	conv2d_22add_340node_add_340"Add
+É
+add_340
+body.11.conv1.weight
+body.11.conv1.bias	conv2d_23node_conv2d_23"Conv*
+kernel_shape@@ *
+group *
+auto_pad"NOTSET *
+	dilations@@ *
+strides@@ *
+pads@@@@ 
+(
+	conv2d_23relu_11node_relu_11"Relu
+É
+relu_11
+body.11.conv2.weight
+body.11.conv2.bias	conv2d_24node_conv2d_24"Conv*
+kernel_shape@@ *
+group *
+auto_pad"NOTSET *
+	dilations@@ *
+strides@@ *
+pads@@@@ 
+0
+add_340
+	conv2d_24add_371node_add_371"Add
+É
+add_371
+body.12.conv1.weight
+body.12.conv1.bias	conv2d_25node_conv2d_25"Conv*
+kernel_shape@@ *
+group *
+auto_pad"NOTSET *
+	dilations@@ *
+strides@@ *
+pads@@@@ 
+(
+	conv2d_25relu_12node_relu_12"Relu
+É
+relu_12
+body.12.conv2.weight
+body.12.conv2.bias	conv2d_26node_conv2d_26"Conv*
+kernel_shape@@ *
+group *
+auto_pad"NOTSET *
+	dilations@@ *
+strides@@ *
+pads@@@@ 
+0
+add_371
+	conv2d_26add_402node_add_402"Add
+É
+add_402
+body.13.conv1.weight
+body.13.conv1.bias	conv2d_27node_conv2d_27"Conv*
+kernel_shape@@ *
+group *
+auto_pad"NOTSET *
+	dilations@@ *
+strides@@ *
+pads@@@@ 
+(
+	conv2d_27relu_13node_relu_13"Relu
+É
+relu_13
+body.13.conv2.weight
+body.13.conv2.bias	conv2d_28node_conv2d_28"Conv*
+kernel_shape@@ *
+group *
+auto_pad"NOTSET *
+	dilations@@ *
+strides@@ *
+pads@@@@ 
+0
+add_402
+	conv2d_28add_433node_add_433"Add
+É
+add_433
+body.14.conv1.weight
+body.14.conv1.bias	conv2d_29node_conv2d_29"Conv*
+kernel_shape@@ *
+group *
+auto_pad"NOTSET *
+	dilations@@ *
+strides@@ *
+pads@@@@ 
+(
+	conv2d_29relu_14node_relu_14"Relu
+É
+relu_14
+body.14.conv2.weight
+body.14.conv2.bias	conv2d_30node_conv2d_30"Conv*
+kernel_shape@@ *
+group *
+auto_pad"NOTSET *
+	dilations@@ *
+strides@@ *
+pads@@@@ 
+0
+add_433
+	conv2d_30add_464node_add_464"Add
+É
+add_464
+body.15.conv1.weight
+body.15.conv1.bias	conv2d_31node_conv2d_31"Conv*
+kernel_shape@@ *
+group *
+auto_pad"NOTSET *
+	dilations@@ *
+strides@@ *
+pads@@@@ 
+(
+	conv2d_31relu_15node_relu_15"Relu
+É
+relu_15
+body.15.conv2.weight
+body.15.conv2.bias	conv2d_32node_conv2d_32"Conv*
+kernel_shape@@ *
+group *
+auto_pad"NOTSET *
+	dilations@@ *
+strides@@ *
+pads@@@@ 
+0
+add_464
+	conv2d_32add_495node_add_495"Add
+Á
+add_495
+body_conv.weight
+body_conv.bias	conv2d_33node_conv2d_33"Conv*
+kernel_shape@@ *
+group *
+auto_pad"NOTSET *
+	dilations@@ *
+strides@@ *
+pads@@@@ 
+/
+conv2d
+	conv2d_33add_506node_add_506"Add
+Í
+add_506
+upsample.body.0.weight
+upsample.body.0.bias	conv2d_34node_conv2d_34"Conv*
+kernel_shape@@ *
+group *
+auto_pad"NOTSET *
+	dilations@@ *
+strides@@ *
+pads@@@@ 
+^
+	conv2d_34pixel_shufflenode_pixel_shuffle"DepthToSpace*
+	blocksize *
+mode"CRD 
+Ó
+pixel_shuffle
+upsample.body.2.weight
+upsample.body.2.bias	conv2d_35node_conv2d_35"Conv*
+kernel_shape@@ *
+group *
+auto_pad"NOTSET *
+	dilations@@ *
+strides@@ *
+pads@@@@ 
+b
+	conv2d_35pixel_shuffle_1node_pixel_shuffle_1"DepthToSpace*
+	blocksize *
+mode"CRD 
+¼
+pixel_shuffle_1
+tail.weight
+	tail.biasoutputnode_conv2d_36"Conv*
+kernel_shape@@ *
+group *
+auto_pad"NOTSET *
+	dilations@@ *
+strides@@ *
+pads@@@@ 
+main_graph*’@B	head.biasJ€(éž=*>ÂW¾	+=¾=Àî¾³n¼¼¦ê¼¿d$¾µtÊ½HeÙ="’$¾šg¹=2î[<o(½Kƒ"¾*7>57Þ½ÖÓë½Êƒü=­#>˜†I=/Íš=Ïv>,0¾')5¾i‡½ j¾½Þ¾˜¬A=a¼½;KI=­Ì>=
+>¾J'=¥\½À5±<’q=ks¼¥ŒŽ=|[;¾¾
+Š=ÃI½t°2¾›N¾µÙ=Î{T;MÎ±=Eý>È‰#¾\¡ºš²è½xFŸ½G~ÿ»rq=3˜¾xE;Öq”=‚æ¼é[u=¾8ho<‹r=]=*š@Bbody.0.conv1.biasJ€[/A¼¥ië<‚<åXƒ¼{Üž<J<
+¼u=¸+õ<"Z÷<c¬³<·Eè<¬™%¼|êë;…!=_¡=ÊªB½s%£¼-ò°</;QºN¥½ñú<ú§=®‹<¤ÓÈ¼PGš<@¬<6í@<ê€Í¼mfa<$õó¼=ks,<åH½\q
+=UÙï¼{ÄÐ;ÜÂå<õ-½{©Ð<½-À¼1¤½×yä¼1“<.»e<Wo¼8^=fó;‚Ê<_<ã<ƒ%¼‚¾½›ã½¢b<÷<½C¸=3Ó<v¦;æ[;áØ½Ú=³2<Ác=Ê¥¼<*š@Bbody.0.conv2.biasJ€|MÈ¼N¢<Áù;=$–u½
+r}<«x ¼†Ga»#	Ä¼u“Q=$i» &½œWš<ÏŠ1½‹œþ¼%ý];!ß,=N#¼Ðº¼êuÆ<+v0<¨õÒ<P=Ï}§<ˆ"†½s;_={7<`w„»@*`¼„8ª<‘Ûf¹ˆ–¹<º1s½;È¼T±=q§8<ÀM\½'oa<²	&<%TÝ<Z.½•Ñ'=o8@½$ë<=^ø<ÅÝ€¼}ÉÌ¼„ÿ¼°‹7¼¼"½ñB=‚¹åºc©I¼’t=	u<¾ˆ/½ê­=]QÄ;®~¼2!Û¼?
+½&ˆ„:p\ô<K_Ù<y»7;*š@Bbody.1.conv1.biasJ€qE¼¯â4<å›; `½Æ;¼1ð;3fŒ¼šçß¼Zé»f[1¼nF<¼ÉÎ½Ùæ±<Œ¥º<¶…é»5öŽ;-V;ë7$½ýé½fà<ðÆ¨<ÒüÀ¼¡©í¼	]è;·7å<Mê¼EA½Ó3±<"|$»Cc-<ð½Ï>Ù<JÆ)<²›<ãK<5|P:kŸÄ¼F‹½?ý‘¼ÆÛ¢<vü˜¼¯=ÑÇ½¡ë–¼XŸí¼èö¸<÷ ‰<0žý¼ÔCE¼…X«< ½ÏE8½ƒ.Œ;óç½½eº3';{Æ)½RÆºd$ºíÿY;|Gû;t–d¼iáÕ¼Õ[½*š@Bbody.1.conv2.biasJ€Tª¼-9Æ¼”Op;×¼'.	½&žG<™Øó<K¾;”)Ù¼Bˆ;Èb½¼-È»”­<ð¨½2Ä³<¹þ=*w«<•r»ñ<‡z«<p½8\A<Y»@¼/rO½&ž>=fû¼úÌ<j!=›ó-<R+»<ïì«¼f²f¼}jæ¼Xƒ¼êÚ<)÷¼ø«!¼A@·m,ù<§Ó<™[Ž»
+“Û¼—XÂ;kÝ=Eú¼nTŒ¼À¼ý¼Ùlö»ìÏ•¼G&=@™ó<W ¼m¼F«¼NAž» 6–<dµ½µ™˜»”ô»"y»éEÀ¼¦BF¼#»‰Ÿ¼*š@Bbody.2.conv1.biasJ€ì{õ<r$Ý<ÀÉ¾¼v»4<CïÅ;6Ýö»©…½O”¼#'<Ö¼¹ºñ¼==h½LTR½)ÑR<ñ— ½Ü“Ð<À	<½K½©½‚Ÿ‚;@ì<,d×¼I×–<>n·<©äÌ;®G¼‡ú2»}}×¼Zsš<Ÿrµ¼Ø¹¤<:™=]l¼ïñ<‹ÝE;hG½¼Ï†¼N=ž(7¼Q˜Ž<œÒ ½OÌ(<Èï¼m³W<7Çé¼Ús¼PI½Lw¶<kÐ™¼´;;<´£¼D¼@<‹ÁG9ˆ½,îÍ¼æ•7¼^Å¼á9¼,}\½£—<rð¼†8”¼¥£R¹©¨¡<Œª¹<*š@Bbody.2.conv2.biasJ€Úµ¡<r­<ã¥<¼±’»	Ï=e­¿¼Eæ˜¼SÎ¼Sü¢<«'¨<3^;/0"=ë½ÕÄ¯¼wLÃ¼#½JÊÈ<âÝd¼_ˆ»u§<‹Ý»eº¾<ß$=@½N— »+À¼rB¿<{nÉ¼N;™(ë¼tÇæ;t–»[X8¼¶Þ¼Ñ]<-Èç<ƒ\½$Bk<ƒx»€—×:$¼MÃ<þ†;”ãS¼× £<:××¼4};Ñ_é<îX¸<Zâê¼We½…Ñ©»Zç<E¡à¼ç’<NäøºM%¹<¿=ª< ­9¼o™<2wã<ÑÂ½<ÔŸ<¦,¼*š@Bbody.3.conv1.biasJ€ÿÑº,¤<Ù‘6;ûâ¤¼Ä­;¢0±¼VEÀ<ÔÆÔ»>L”<È€Š½ƒíÁ<é`‹¸í`|¼J„O<.8¹<%#¼KÌ·¼z½~»4³;³½i}y<c½Ó¼;+´¼	|N;;	½Ã4(<·6D½»8v<`Á<*nB¼é]¼IÊ»ø$¿»ù’»}³¿»-?g»QÀ¯¼õBØ¼Ä0^½R =,ô¼94¶<–Ð¼–¼:´è»2ì`½ Þ«¼´áâºtÜ¼-@ ;°¢·¼t¨ä¼ý5\¼H×½¼üB6½&Kœ<ÿÚÒ;Ô¼ÜÖ¼öØÅ<{’½³	¼=û'½\½*š@Bbody.3.conv2.biasJ€‡ß½É¢D<®ÿ;¼XŠÆ:LÉU»F<Š<>AI;tºÉ¼Pß&<(Ö<½üV¼²$„¼ç+%;UO
+½îf»ƒÚa<³£†<¾¼”ú'<G¾<¦ ¼~Ä¼æ÷½ì+:^¡;â~L¼'½âŒ<»éä:G¡=~î²<‘ <{ÜW9ñ$‰<Ï˜ß;×¤¦<d1¶¼ùŸa;ºß)<WCŒ;
+Í<«¬<²ÛŸ<ä=löe<‚p¢»Ï÷Í<5–;OmM¼ÁèÝ;±¢ã¼:¿¸:!q¼ƒf;Î¼ßü§<n»‡¼öç¼Æ5<&¾ñ;q_ú¼Áé¼¤
+½1¡‘<*š@Bbody.4.conv1.biasJ€2_x½]˜ <2Tu»3TI¼{&Š8YS¡¼‰¶(½‡H½²Ðå;†*Ž¼‚M¼*rE¼A	½.ö†½%Wê¼~iš¼¤ï¬¼ÑV<-/¼IY9<¹›½<‹DÌ8V¢¹~Ã¼¨ª<ÅÆ‰¼[½yÊ¼þü»q>F<Å;<Ç±¬ºöa»‹¢Ø<ã¬³»y)Ð¼‹9¢ƒ½	¶½6)¹;¼jƒ¼9¿œ¼ë7h;¶‹ü»?ê»ÙK-»Í´<Ë_<<ÑL¼7t[¼ ýª<ÆïÜ¼ËÐÔ»ô;€Ž¼3P8<ˆ1ó¼T<TÏç¼Ô›’¼ûýý¼Ì,½ 7Š;9ñ½*š@Bbody.4.conv2.biasJ€¥|¼äRÙ¼lÿ²¼97¼z^…¼X;À;Îu½ 6¼õ´;‹.4<ûß<j£†¼2‡ð¼U†}¼÷7€<=ê	=ˆ‡»B!g<O¬#»M½qéX¼x,C¼ÖÎ<`&½$£ª< <
+Ó;&ÇF<?T±¼Wì¼{•Y¼‚t±¼êó]<dk†»ø$g¼	„Ä<Ÿ 4;ãqØ<nûè<Q$U<*È¼ªÜð;ýÂv¼mè¼¢¹¯<1¿œ¼8ÌÛ»ÛK†;2C³<—­õ<ïÞ¾<Ê¢í<;ø[¼Š(!¼tÜq<ú«<«a¼ÑÉ<ÑX“<ÙûÞ<ò<+Dñ<WŸÃ<Ø ´¼*š@Bbody.5.conv1.biasJ€ ˜»ç<xæ¦<‚¾{;˜âå:Žôr½¦À
+¼J¤“;¶x1<Ž	¶¼j¼h¥ì¼çñ¼1~P½í½ÜÌ<<ù¼!ÿM»â€½tX<=ÃO»÷@»ð"º©¼éž¼ø¶‰ãÆ»‚”¼~±Ý¸ò¹<¤QÈ¼[s»µïž»~Ïü<¶ º¼Üu½.}­¼ÙŸ <c[FºpW½)y©¼zŽ‹¼ÀŠ¼ô?2¼½óÌ;¶:…½m¥N;EÌ½3”;õþm¼ÞýÕ:Ì:
+½I1Ò:»z²»;\Þº.6”»Ò?±¼W¼ciÂ»™’¼A¼”rÓ;*š@Bbody.5.conv2.biasJ€­¦¼ôV£<ª
+=±Ö<JC\»
+WÂ<3=eJò<Ï‡<|±Ÿ¼né(<þOÇ<·À<fô<Œ1¸<0Ì¼|Ö®<^7½7˜[:“é~<½o¦;ú”ì;Ï¾8¼’Á =)~½<8J7<\á¼aD<íy•<º-Ž9=÷õ¼FTü¼¥	¯;cEŽ<#…¼q½¼Ú+¼#4L¼*—½è}»(õ¢<±Íë¼§©¼\‘•»çÀ¼P?u<Áá‹¼hU²¼¿ß¼}Õí¼©×<=ó·ÿ õ¼‰ü<ãå	»ÐÎý<ÚäÈ<vâ‡<™£¼³Ž¿¼2ã;4Í»tÛ¼5ð7¼*š@Bbody.6.conv1.biasJ€¥¯¼Çÿ¡;§ñJ;]GI½!¢½±&<Ì’Ê¼DÍ¼™œÚ¼¤xX<úƒ¥<ú¼(<éq<‘E¼8jU¼áƒ»@É–»F•½åª¼¡+{¼—ÃB<‘®Ï;Öº„Èš<å¾<YMŽ<Â…¼Í¹ø¹J2B;„5F<h]¼˜[¼ œ„;„Y›¼—SL»zÍ»Jß©¼2,³<yT¼”.#;’È¬<‡mw¼–r-<ö¢<rÓ<èLå¼ÔŒ»¼G•d½^’ºÕÚÏ¼ÑÌð;O´<<`Å<“«¡¼€.¶<*=7¼šÊý»D¢„:q;S¼wWl<=*»uÎ¼F4k<*š@Bbody.6.conv2.biasJ€oÏ<»Í¼Í6¼°|¼1;©0W<v¼U$<ºgƒ<£äõ<Aò» ¥<WŸ¯¼ç¢4¼˜Ê½ô•‡¼¹Â¼QË¼ìv<<é‚¼Æ‚˜¼çe{<~#Û<¾D¼V
+­¼çQ½¨VÛ»²¾g<£ªÔºíÂî»—</ƒ=³ò¼’Ô<vo·»Ì)›¼ !=$4æº?–ë< ¨‚<KüD<?@¼ƒ½=Æ.t¼KºÒ<î—;ºN&<ÜëÃ¼ŽÍ:½ô7 ¼×´c¼»/5<!3'¼l8~»Þe;ARù8ïº‹º€…Ý¼Ú
+”¼’+=<(ú<˜Â¼þ=½‹¼*š@Bbody.7.conv1.biasJ€£Z½ß˜©<Ü¬z<`IÂ¼œÔI<ÿz»^”Ë;R]é»Ðj¼á¨¼µ+½ÍA‚<þ¨ÿ»à`¸;È4¿<™ZC¼¹ÛÎ¼ŠÝ¦<×*½Y‚¹¼‡:<P½¹z=<òÄ;[ã <ë»—;‰ë¼	–»» ±¼¦/­<ÕÉS<?†»¹;pŸ¼w»»¬ÀÈ<›?Û;¨'1¼ý‡˜;‘ñ<)Â<û½^mß¼qBi¼¡Ä}<B{Û¼ÏJ‰¼)õq9*G<¼Gj¼Whž;j×o<M<nv¼RFo¼ªˆì¼Šè;©»Ó»d¹¼ôað;Dþ¼'²¼ùj»*š@Bbody.7.conv2.biasJ€_mŽ¼“Ø<q»¼êê¯»Ø=e#<2“z¼`3´»Ô¹«¼‘aù<Ïñ;IÛõ<%³<´ÀT¼ÿŸV¼?t­»ßÖ=²®Ç<tG¸<!jÄ<•‚¼®tá;O1
+½Y²;kŒÒ:â¼}˜À»&½'È¼·øÌ¼âv2<Ás¾¼TÜ¼˜n»&Œ¡<°íì<·º|Öè<’¼Ïc|<MHÅ<‘¼£˜×ºÜ9‚»Š\Ö<·òá¼6<ú›;M³<K·ç»¿³f<‡^B¼;w¤<ÔL†<¸¢<ìwj<ö9â¼÷ËCºå¶=I0)¼êÆ;ÖÖÁ:’øŸ<{˜»*š@Bbody.8.conv1.biasJ€ürÔ<Z95lß»†¶@<|”<?w¦»øÄ·;¿E&;-ñ!¼Ž˜Î;h¸ÿ;DYˆ¼È5„¼ P˜¼}å;ÒÃ½‚ˆ¼Á4$<µ@“¼Ú½²ü$¼lY½ô£¬<µ»»"îº¡aß;ÂýÉ;6£<ºÿ·¼¥ÃÀ:L$Æ<Ê¯»)=»&_»gy<úC(½Ã<_¶%¼,Ãñ¼m°a:Ô+ò¼›R¦9ª*<0vW½®œ¡;Ïÿ¼
+`<\þ=½† V<4¼ý:…2’<‡<‹¡I¸òåŒ»¢a-½ü[÷ºàÕÈ<Oâ-<6”4¼ÍÕ½».¼–ö•9é	½;º¥;*š@Bbody.8.conv2.biasJ€}ƒ=)6<©L+=ÑØÀ¼(è =Ð¯½Ôâ¼ÆÂŠ<»…G¼ZÇî¼@1Å<šlÐ;•ï<†Ë7¼œ¡é<À®¼§i;%N;C=­<¹Mý<býå<cªÏ¼é°½j²Ú<lÝ½–O<£êÿ¼Ž½…Â=âØ$=Gok<Þå;Z»î<î¢¼È{Ü»S<aµâ»]î»:¾S<›Læ¼Bz¹<(Ô<‘È{¼-%» Ö³¼%l»Àu'<i²<¨µ<I&¼<#‚<hJ¢¼ÿÍ¼ÐÖ»G.”;c–Ý»S!=æ‡4<íµ²¼šà™¹Šã;È²0¼5ë;ìàÚ;*š@Bbody.9.conv1.biasJ€J9ª¼Çï½ §›<Òe³¼ú<{™¼|$±:×I½ýÎ½B˜¶»áˆr»ÒU¿ºÄ¿<Üç¼÷†D;ê{í¼s¸Õ»ì?½ýdÆ¼‹—¼»j]‚¼[j¼î¯¼;„½>îØ<G».+½-k<¿<-®â< §¼»ÙØ¼¡Ÿ™¼Qöy<ši<’¬É;…d<\œ<¼Ï$£¼«'½mçù»Oxv<Aî¼CÑâ<ÖÇ =ù›ö¼)<ÒÁæ¼9ó$½ºŒ;ëë<9ðø¼«ZÃ:Ë¤—<öí¼€jC:8/¯<õ	½Úžj<3jû;ê^ß<£G[¼Vì¼”s½¼*š@Bbody.9.conv2.biasJ€Ôž½#ì=¶šÅ¼, ‚;Þš½”F”<fè=<3%ü¼øúª<ÄE¼{5’¼Ñù;}a» Ší¼¯åö¼Í¬<{<%T¯;·wß¼Šxä¼y¥ê<5>Ø¼L=Ï¼àý”¼¨¸8<þÀ;4ë¼<u)Æ<YÌ<c0½O9€</v±¼#C£:¬öý<À8Ü;âÃÚ¼`êÑ¼b˜é¼{Kï¼ÈÖg¼üm‰¼4“Ö¼‘:T¼ ‹<íA¯;…)I¼a*¼hæH¼Ù+È»üõ½hõl<ñ3<<ý¾»‡R¼Éô°»’Çl¼÷ãÌ¼v¤˜<ø ž¼Uj–<õÞ`¼ýò‡;‹5=ª§S;*›@Bbody.10.conv1.biasJ€»²½X»»â2¼F”;2¿}»Ñ"ƒ;øñ¼ëñ¼Ù5»¥T[¼*'¼Êeäº+T¼¶Ö2½º¼ºÃ£½Ä&½rYf¼UÚ};ø¼ý ¨¼¢¡!½ü*î»%”2<òd#½g×0<eIð¼¡66;ytÊ¼ÈÎ¬<-[@;ÍR4½h®•¼­W&½;5½C^-¼®€ =Ù*æ¼%g¶¼UtD¼M‹<„‹u¼b#æ¼•½TÅŠ¼Õ˜W»lG¯¼¾==½€ÁŒ<Qi¿¼eÈ·<°W‘¼.R<½èi¾¼éEL;aô¼—ÅÒ<Lñp¼`@÷<§o½ñ³¿ºÃÞ¼3Ç;*›@Bbody.10.conv2.biasJ€5—ƒ¼];ý;îç»©'; ½˜§=Âø}»v¼ér@¼\-î;1––¼¢ù#¼Kˆ=fúÃ<q6<—Òç<’e;m=ó#à¼!Cç»¬Ã¼›[:e,=ÚÒè; ¢9¼­ì¨»¼q ½©´³<ÇÍ:n×Æ¼'8¾¼¡+<t‰§<q†<Y½]™<ey°¼Mš¹¼›lÆ<ŽV¼#úé¼rwÀ<‰\´<„„9ìß´¼gÊU;ú‹w¼±u¸;.xÛ<hVä<ôEÛ¼Už†»ŽL™<!Öì<!w<Û‰ì;1`â<ìÍÙ»yô¥<Ôü·¼7c»Ûàä;¢òu¼¬‹b<*›@Bbody.11.conv1.biasJ€GÍ©¼‚ù¼wé¨¼‚:T<Š²G¼¿¨È»«&V<b7¼›~"<YðÚ¼Ÿæ^¼¾I,½° 4»úà#;Ô1÷»Ý6½Ku<˜¯¼.–„¼Ždj;r‚øºYñ½ø–Õ¼SçË;3þù<<Ò½¿´á9ê¹„¼V^S½´€;U>©¼‰Lÿ¼RÑF½Š¤ý¼Ø]<¹Ø¼€½ã¼D <ò´½8“w¼1é‚¼nqÃ¼\ë	½u+;îúÌ»l%Õ:òa¼ínŸ9`“ë¼4<Í×„¼Šq½×åÍ<Ê ã¼	}n¼ƒ©»ª¦<UŸæ¼4
+ñ:þ?ç¼,uƒ¼g°»v‘™<*›@Bbody.11.conv2.biasJ€÷Ë€¼Prú¼™—¼ÅcÞ;1!¶<ÎTÏ¼“Ê<ÛÅµ; ³¼¦J½“v7¼¦€<*wÐ<ŠÁ¾¼Ÿ;À<Íx<‘©j<‰‰Z<(Uí<‹Ø»\oö¼”ö=;RSV;ýg¼x”÷»‰‘¼n»†<;ÎŠ<àÔ½Õù<)=¼]}à:~¥¼eÙ;0×m;ÃX¶;¸’<{w½·ƒ”< ©ì»ˆ¤î;c}*¼ˆ¼ Ó.½·Ù¼X‰™¸¸ÌÆ¼]FŒº† ½|=ë Œ»E)ºa‘²<RK<(M½¢·¼ù?u<üÑk<X	‰¼j1Ì¼]Œ‹¼(ˆá»V`o¼D}	½*›@Bbody.12.conv1.biasJ€C·W<I Ë<“‚<ª*^<uWÓ¼®¥;­>N¼Agì<|Ž½ÃQÙ¼•£Ÿ¼}¹¼äÅ¼WO™<µÊ`<A–¼ÚÌ%<NÝ³¼dö¼2ïä¼4ˆ»]‡<+:½ï•Ã¼ÛC©»Uh¼EÿC»V'ö¼ÍSy»kË/½3¦¼ôÏ;êøV: '×¼ƒIž91L½P»‡Ÿ%;Pè<Æé]½Üš	¼þr’¼ê¤¼]¦<CÑ8<¬°<#uR¼ù}Ç»V½1u
+½¦¼ü<Ú¥<ã7½™×ºåš<(©À;Ê"‰»•Õä;ãžÚ;Ò¡y:Ü›s<0a½<ì'½*›@Bbody.12.conv2.biasJ€=Ú½‚0S<Î?È¼i…n<‘ÞÓ<o]X;IÇ!<ú39Ð¼I¶£<|p8<˜>¼¼Ù\r<þªÑ¼ç°Ñ¼oVþ;‡L_¼Gè<GHé;;Çú<-<–c;Æ ;e¼J ¶;Z\<Š™Ì<7À»¼¼°íå<•A½víK<§L¼ÂH¼Zú¼cÂs;î\e<ÑÈ <š‰!<ßK|¼.—š<åìá»îo”:®–<ŠÁ=jÉ¼Øò<\cå»"I·:š‡<¢ñ!¼kTß¼û›¼ÿ„<|è»ÜÝ¼q™š»á“¶¼^dƒ¼<ÿ¼Ti<Jj‚¼a‹¼*›@Bbody.13.conv1.biasJ€?÷<5à9IÛ¼OèÒ¼ë:Ò9q¼éïì¼Ÿ3Å;äÒ»C8‡¼¼¾¹<¯³˜<6ú5»‰&n<hdŽ¼R­{<åW¿:+·“¼ëÐ¼Ò:¾¼Ó­¼ðåð¼òwý<¨ê<ÿT)½Ö¿:#Â=<C»;tä]¼yp»Ý&<iç¼†h½‚ç¨<´± »ê¯<™½ðeý»â›!½Û·½ç½„<ÓˆÀ;)Š;Ü9Â;ÄÆU<ÒíÝ<­†ð¼Y[	=ÜÎ¼[¦S½W0ø»š¹î»½¶<yƒ»M.<oO±¼‰%ã¹ O:¼Á½LÛË<ÆÆ¼Ôa“<{÷˜;*›@Bbody.13.conv2.biasJ€%Œ<-=t=¿¬ƒ<Dh&¼®¤:¼³¸<NÇ;¿t<ck<¼=™®¼Í[Ÿ<n—Ë¼Á.'=©ô<=Ä~t<èà°¼¶1¼âx»ìU¹<­z»u##<<„Ë¼-@$½Ôa=ñ×Î¼Ï¾S<;È‚;u0x<%µY»£Ê=Éi<šª¼ùÙ¼ŽAF<ñ;ƒÆ<Ç˜<m1‹<9B½ÆôÃ¼?r»·Ãº¼o¹»)Î¯¼oæÿ¼F=s"Ë¼R{¿¼]ýš<ñI´<ügA»±‹V<¬îJ¼6â¼õë»½Ù¼‡rÚ¼8à®<Ò =·üP¼ò™<føê¼yx¼*›@Bbody.14.conv1.biasJ€kE<`2Ž¼°Y½ðjÑ<eÎ[¼o	
+»îÙh½: "½ubf<¸Â<Z\å;\Ò ½¾Ô<kƒF;\Š»Òy¼~MY<eÀ:®>½ßæ<bê½¬ÖÏ¼„P[;uµ¼v˜È<³AT»ÕÿØ<¸·ð¼e¥=ÝY¼Eµ¤¼9È¼•ñµ<ÑRò¼)b=(R½˜%^:zÃ”¼,ù¤8”K°<ðå<t!Ê¼èÈ<Ý(ñ»» M¸á>·<Ü=Ñ¼êa¼Z¹<†'½G\ª»¨“Ä;i=žiª¼û <à`»ý¼Ë#<ElV¼½“ÚÈ<&ên;·ˆ½r]½*›@Bbody.14.conv2.biasJ€Ú`:övÚ¼?0&<V<ë\é<uu½kÄºm¦I<ºj=ÿÃ‚<÷³m¼º<³¼ØÅ¼Š€©¼Ll»è}<9¤<Ô˜<D3É»U)Ñ¼““»<à÷H¼ähú<&ÃZ<ê®»®M¶»$;Ã;Ow=q­Š¼«:<ŽY½4r;m›Ó<Äh4¼E-ˆ<Ù=	L<Qá¼ƒÊ;<_‰÷<àÏb<õ£¼Ë¸½xÂÚ¼qz;ø¯-<*Àý<ÛÆ¼õt<1¡l;¯·(½Á¯«»ž Ù¼Êd¸<ÿI	½gåß<Ûwó;º;	;œ¿í»@ã¼BØ¼áw½XýÅ;†¿<*›@Bbody.15.conv1.biasJ€¶eÃºÜsƒ¼Öw»©lè¼5•/½—Ë¹ºÙ½æ¦%=ôó[¼üº¸ô•<Þê ½‚XÉ<Ù´ö¼{Æ¼Üþ¸8T¼Îb<³š¼]•	<GüÙ;÷S½É¼Iž½µš9<£†»“2½’ü<î
+=~’Æ:Òˆª:„¸Ê¼¤uÊ<vÓ;*Ë>¼+§á<c4´»7¨<öåœ¼¨^Ç»F#*½f7ç»,Ž<Œ[¡<˜€»®XC¼¤x¨<Ç¼œ <…Ë¼™PÇ¼(ˆS¹DBˆ<! ¦¼T×i¼¾÷ê¼FŒ=Š˜”¼P„¡:¥·)¼¡æô¼ö-Q¼1e:¼Ãiè<*›@Bbody.15.conv2.biasJ€6< Ví;Ô£Ø;‰Ò¼ñ£¼	Ž;b	½§þn<µÜ¼-Œ©¼õŒ„<\Â;æë¼ÒŠ¯¼Þ;ÍN;qÕ*=i÷=êñ¼yËÔ¼š¼l¤»<;¦Ð<í<Œ#5<Yth<GÙ};
+ÉW¼³»½EÄÜ¼£¼ëƒ¼9bƒ<%Ø³¼M³;)TÈ¼O+½Fù‹<lª§¼­Ï¼íÛ½o9_<ÎF=‘”[½®¯+¼nÝ;MM;gŠÈ<ÿ@<Óu»¼e|<¼¼\ó¶<6“¼ÉL><î¹x;ˆ +=öÅé<dË<àw‚º”¹¼“;4ü=„Ëç<*—@Bbody_conv.biasJ€Ht=ßÑ^½ÝÞ=UoP<
+%ã¼ˆ6”<
+×Ò<â¶)=û0Q=
+—õ;Ån½§98=ÛÔ˜:Nf¼óvÄ<¼va=K0<ÿ,i;›5þ<5Ë$¼ÆÓò¼î™¼2½ü’$½ùK=o¥¡¼#j+=ÿ÷=[ñ\<š\ó»xØ«¼A<ˆ½Žæ1½®Ãý<nö»´Úú¼BïÚ<ó7T=ê›¿¼$G+=ž\½5‘^<>Î«;¼l==¼žÂ¼PR&<AvÜ;½'¹¶¼£=è²¢<å·D=?”O¼Ü©ì¼>–·¼ýÉ¼/mç<T}‹¼!i¢¼»“)=uº</Œ=f2:*W€Bupsample.body.0.biasj
+locationmodel.onnx.dataj
+offset0j
+length1024p*Z€Bupsample.body.2.biasj
+locationmodel.onnx.dataj
+offset1024j
+length1024p*B	tail.biasJ x=›²¼Ñ,†¼*V@Bhead.weightj
+locationmodel.onnx.dataj
+offset2048j
+length6912p*a@@Bbody.0.conv1.weightj
+locationmodel.onnx.dataj
+offset15872j
+length147456p*b@@Bbody.0.conv2.weightj
+locationmodel.onnx.dataj
+offset163328j
+length147456p*b@@Bbody.1.conv1.weightj
+locationmodel.onnx.dataj
+offset310784j
+length147456p*b@@Bbody.1.conv2.weightj
+locationmodel.onnx.dataj
+offset458240j
+length147456p*b@@Bbody.2.conv1.weightj
+locationmodel.onnx.dataj
+offset605696j
+length147456p*b@@Bbody.2.conv2.weightj
+locationmodel.onnx.dataj
+offset753152j
+length147456p*b@@Bbody.3.conv1.weightj
+locationmodel.onnx.dataj
+offset900608j
+length147456p*c@@Bbody.3.conv2.weightj
+locationmodel.onnx.dataj
+offset1048064j
+length147456p*c@@Bbody.4.conv1.weightj
+locationmodel.onnx.dataj
+offset1195520j
+length147456p*c@@Bbody.4.conv2.weightj
+locationmodel.onnx.dataj
+offset1342976j
+length147456p*c@@Bbody.5.conv1.weightj
+locationmodel.onnx.dataj
+offset1490432j
+length147456p*c@@Bbody.5.conv2.weightj
+locationmodel.onnx.dataj
+offset1637888j
+length147456p*c@@Bbody.6.conv1.weightj
+locationmodel.onnx.dataj
+offset1785344j
+length147456p*c@@Bbody.6.conv2.weightj
+locationmodel.onnx.dataj
+offset1932800j
+length147456p*c@@Bbody.7.conv1.weightj
+locationmodel.onnx.dataj
+offset2080256j
+length147456p*c@@Bbody.7.conv2.weightj
+locationmodel.onnx.dataj
+offset2227712j
+length147456p*c@@Bbody.8.conv1.weightj
+locationmodel.onnx.dataj
+offset2375168j
+length147456p*c@@Bbody.8.conv2.weightj
+locationmodel.onnx.dataj
+offset2522624j
+length147456p*c@@Bbody.9.conv1.weightj
+locationmodel.onnx.dataj
+offset2670080j
+length147456p*c@@Bbody.9.conv2.weightj
+locationmodel.onnx.dataj
+offset2817536j
+length147456p*d@@Bbody.10.conv1.weightj
+locationmodel.onnx.dataj
+offset2964992j
+length147456p*d@@Bbody.10.conv2.weightj
+locationmodel.onnx.dataj
+offset3112448j
+length147456p*d@@Bbody.11.conv1.weightj
+locationmodel.onnx.dataj
+offset3259904j
+length147456p*d@@Bbody.11.conv2.weightj
+locationmodel.onnx.dataj
+offset3407360j
+length147456p*d@@Bbody.12.conv1.weightj
+locationmodel.onnx.dataj
+offset3554816j
+length147456p*d@@Bbody.12.conv2.weightj
+locationmodel.onnx.dataj
+offset3702272j
+length147456p*d@@Bbody.13.conv1.weightj
+locationmodel.onnx.dataj
+offset3849728j
+length147456p*d@@Bbody.13.conv2.weightj
+locationmodel.onnx.dataj
+offset3997184j
+length147456p*d@@Bbody.14.conv1.weightj
+locationmodel.onnx.dataj
+offset4144640j
+length147456p*d@@Bbody.14.conv2.weightj
+locationmodel.onnx.dataj
+offset4292096j
+length147456p*d@@Bbody.15.conv1.weightj
+locationmodel.onnx.dataj
+offset4439552j
+length147456p*d@@Bbody.15.conv2.weightj
+locationmodel.onnx.dataj
+offset4587008j
+length147456p*`@@Bbody_conv.weightj
+locationmodel.onnx.dataj
+offset4734464j
+length147456p*g€@Bupsample.body.0.weightj
+locationmodel.onnx.dataj
+offset4881920j
+length589824p*g€@Bupsample.body.2.weightj
+locationmodel.onnx.dataj
+offset5471744j
+length589824p*V@Btail.weightj
+locationmodel.onnx.dataj
+offset8960j
+length6912pZW
+input&
+$ 
+batch
+
+height
+width"&
+!pkg.torch.onnx.original_node_namexbd
+output*
+($
+batch
+
+
+4*height
+	4*width".
+!pkg.torch.onnx.original_node_name	conv2d_36j
+	head.bias
+
+
+@j
+body.0.conv1.bias
+
+
+@j
+body.0.conv2.bias
+
+
+@j
+body.1.conv1.bias
+
+
+@j
+body.1.conv2.bias
+
+
+@j
+body.2.conv1.bias
+
+
+@j
+body.2.conv2.bias
+
+
+@j
+body.3.conv1.bias
+
+
+@j
+body.3.conv2.bias
+
+
+@j
+body.4.conv1.bias
+
+
+@j
+body.4.conv2.bias
+
+
+@j
+body.5.conv1.bias
+
+
+@j
+body.5.conv2.bias
+
+
+@j
+body.6.conv1.bias
+
+
+@j
+body.6.conv2.bias
+
+
+@j
+body.7.conv1.bias
+
+
+@j
+body.7.conv2.bias
+
+
+@j
+body.8.conv1.bias
+
+
+@j
+body.8.conv2.bias
+
+
+@j
+body.9.conv1.bias
+
+
+@j
+body.9.conv2.bias
+
+
+@j 
+body.10.conv1.bias
+
+
+@j 
+body.10.conv2.bias
+
+
+@j 
+body.11.conv1.bias
+
+
+@j 
+body.11.conv2.bias
+
+
+@j 
+body.12.conv1.bias
+
+
+@j 
+body.12.conv2.bias
+
+
+@j 
+body.13.conv1.bias
+
+
+@j 
+body.13.conv2.bias
+
+
+@j 
+body.14.conv1.bias
+
+
+@j 
+body.14.conv2.bias
+
+
+@j 
+body.15.conv1.bias
+
+
+@j 
+body.15.conv2.bias
+
+
+@j
+body_conv.bias
+
+
+@j#
+upsample.body.0.bias
+	
+€j#
+upsample.body.2.bias
+	
+€j
+	tail.bias
+
+
+j%
+head.weight
+
+@
+
+
+j-
+body.0.conv1.weight
+
+@
+@
+
+j-
+body.0.conv2.weight
+
+@
+@
+
+j-
+body.1.conv1.weight
+
+@
+@
+
+j-
+body.1.conv2.weight
+
+@
+@
+
+j-
+body.2.conv1.weight
+
+@
+@
+
+j-
+body.2.conv2.weight
+
+@
+@
+
+j-
+body.3.conv1.weight
+
+@
+@
+
+j-
+body.3.conv2.weight
+
+@
+@
+
+j-
+body.4.conv1.weight
+
+@
+@
+
+j-
+body.4.conv2.weight
+
+@
+@
+
+j-
+body.5.conv1.weight
+
+@
+@
+
+j-
+body.5.conv2.weight
+
+@
+@
+
+j-
+body.6.conv1.weight
+
+@
+@
+
+j-
+body.6.conv2.weight
+
+@
+@
+
+j-
+body.7.conv1.weight
+
+@
+@
+
+j-
+body.7.conv2.weight
+
+@
+@
+
+j-
+body.8.conv1.weight
+
+@
+@
+
+j-
+body.8.conv2.weight
+
+@
+@
+
+j-
+body.9.conv1.weight
+
+@
+@
+
+j-
+body.9.conv2.weight
+
+@
+@
+
+j.
+body.10.conv1.weight
+
+@
+@
+
+j.
+body.10.conv2.weight
+
+@
+@
+
+j.
+body.11.conv1.weight
+
+@
+@
+
+j.
+body.11.conv2.weight
+
+@
+@
+
+j.
+body.12.conv1.weight
+
+@
+@
+
+j.
+body.12.conv2.weight
+
+@
+@
+
+j.
+body.13.conv1.weight
+
+@
+@
+
+j.
+body.13.conv2.weight
+
+@
+@
+
+j.
+body.14.conv1.weight
+
+@
+@
+
+j.
+body.14.conv2.weight
+
+@
+@
+
+j.
+body.15.conv1.weight
+
+@
+@
+
+j.
+body.15.conv2.weight
+
+@
+@
+
+j*
+body_conv.weight
+
+@
+@
+
+j1
+upsample.body.0.weight
+
+€
+@
+
+j1
+upsample.body.2.weight
+
+€
+@
+
+j%
+tail.weight
+
+
+@
+
+j0
+conv2d&
+$ 
+batch
+@
+height
+widthj2
+conv2d_1&
+$ 
+batch
+@
+height
+widthj.
+relu&
+$ 
+batch
+@
+height
+widthj2
+conv2d_2&
+$ 
+batch
+@
+height
+widthj0
+add_30&
+$ 
+batch
+@
+height
+widthj2
+conv2d_3&
+$ 
+batch
+@
+height
+widthj0
+relu_1&
+$ 
+batch
+@
+height
+widthj2
+conv2d_4&
+$ 
+batch
+@
+height
+widthj0
+add_61&
+$ 
+batch
+@
+height
+widthj2
+conv2d_5&
+$ 
+batch
+@
+height
+widthj0
+relu_2&
+$ 
+batch
+@
+height
+widthj2
+conv2d_6&
+$ 
+batch
+@
+height
+widthj0
+add_92&
+$ 
+batch
+@
+height
+widthj2
+conv2d_7&
+$ 
+batch
+@
+height
+widthj0
+relu_3&
+$ 
+batch
+@
+height
+widthj2
+conv2d_8&
+$ 
+batch
+@
+height
+widthj1
+add_123&
+$ 
+batch
+@
+height
+widthj2
+conv2d_9&
+$ 
+batch
+@
+height
+widthj0
+relu_4&
+$ 
+batch
+@
+height
+widthj3
+	conv2d_10&
+$ 
+batch
+@
+height
+widthj1
+add_154&
+$ 
+batch
+@
+height
+widthj3
+	conv2d_11&
+$ 
+batch
+@
+height
+widthj0
+relu_5&
+$ 
+batch
+@
+height
+widthj3
+	conv2d_12&
+$ 
+batch
+@
+height
+widthj1
+add_185&
+$ 
+batch
+@
+height
+widthj3
+	conv2d_13&
+$ 
+batch
+@
+height
+widthj0
+relu_6&
+$ 
+batch
+@
+height
+widthj3
+	conv2d_14&
+$ 
+batch
+@
+height
+widthj1
+add_216&
+$ 
+batch
+@
+height
+widthj3
+	conv2d_15&
+$ 
+batch
+@
+height
+widthj0
+relu_7&
+$ 
+batch
+@
+height
+widthj3
+	conv2d_16&
+$ 
+batch
+@
+height
+widthj1
+add_247&
+$ 
+batch
+@
+height
+widthj3
+	conv2d_17&
+$ 
+batch
+@
+height
+widthj0
+relu_8&
+$ 
+batch
+@
+height
+widthj3
+	conv2d_18&
+$ 
+batch
+@
+height
+widthj1
+add_278&
+$ 
+batch
+@
+height
+widthj3
+	conv2d_19&
+$ 
+batch
+@
+height
+widthj0
+relu_9&
+$ 
+batch
+@
+height
+widthj3
+	conv2d_20&
+$ 
+batch
+@
+height
+widthj1
+add_309&
+$ 
+batch
+@
+height
+widthj3
+	conv2d_21&
+$ 
+batch
+@
+height
+widthj1
+relu_10&
+$ 
+batch
+@
+height
+widthj3
+	conv2d_22&
+$ 
+batch
+@
+height
+widthj1
+add_340&
+$ 
+batch
+@
+height
+widthj3
+	conv2d_23&
+$ 
+batch
+@
+height
+widthj1
+relu_11&
+$ 
+batch
+@
+height
+widthj3
+	conv2d_24&
+$ 
+batch
+@
+height
+widthj1
+add_371&
+$ 
+batch
+@
+height
+widthj3
+	conv2d_25&
+$ 
+batch
+@
+height
+widthj1
+relu_12&
+$ 
+batch
+@
+height
+widthj3
+	conv2d_26&
+$ 
+batch
+@
+height
+widthj1
+add_402&
+$ 
+batch
+@
+height
+widthj3
+	conv2d_27&
+$ 
+batch
+@
+height
+widthj1
+relu_13&
+$ 
+batch
+@
+height
+widthj3
+	conv2d_28&
+$ 
+batch
+@
+height
+widthj1
+add_433&
+$ 
+batch
+@
+height
+widthj3
+	conv2d_29&
+$ 
+batch
+@
+height
+widthj1
+relu_14&
+$ 
+batch
+@
+height
+widthj3
+	conv2d_30&
+$ 
+batch
+@
+height
+widthj1
+add_464&
+$ 
+batch
+@
+height
+widthj3
+	conv2d_31&
+$ 
+batch
+@
+height
+widthj1
+relu_15&
+$ 
+batch
+@
+height
+widthj3
+	conv2d_32&
+$ 
+batch
+@
+height
+widthj1
+add_495&
+$ 
+batch
+@
+height
+widthj3
+	conv2d_33&
+$ 
+batch
+@
+height
+widthj1
+add_506&
+$ 
+batch
+@
+height
+widthj4
+	conv2d_34'
+%!
+batch
+€
+height
+widthj;
+pixel_shuffle*
+($
+batch
+@
+
+2*height
+	2*widthj8
+	conv2d_35+
+)%
+batch
+€
+
+2*height
+	2*widthj=
+pixel_shuffle_1*
+($
+batch
+@
+
+4*height
+	4*widthB
+ 
